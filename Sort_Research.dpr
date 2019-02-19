@@ -20,10 +20,10 @@ begin
     n := 0;
     while n < 1 do
     begin
-      write('Enter n: ');
+      write('Enter n(size of array): ');
       readln(n);
     end;
-    write('Enter output fname: ');
+    write('Enter output fname(leave empty if dont want): ');
     Readln(fname);
     mas := Gen_mas(n,1000);
     //Write_Mas(mas,'');
@@ -38,11 +38,11 @@ begin
     //
     mas := Gen_mas(n,rnd);
     //1- Sort by BUBBLE n = 10000 t = 190 ms
-    {QueryPerformanceFrequency(fr);
+    QueryPerformanceFrequency(fr);
     t := time;
     BUBBLE_SORT(mas);
     t := time - t;
-    writeln('time = ', t / fr: 0: 4, ' ms ','BUBBLE_SORT');}
+    writeln('time = ', t / fr: 0: 4, ' ms ','BUBBLE_SORT');
     //
     mas := Gen_mas(n,rnd);
     t := time;
